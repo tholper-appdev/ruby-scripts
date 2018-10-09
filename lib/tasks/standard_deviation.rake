@@ -32,7 +32,7 @@ task :standard_deviation do
   #  - take the square root of the variance
   stand_dev = Math.sqrt(variance)
 
-  ap("Sorted numbers:")
+  ap("Your numbers:")
   ap(numbers)
   ap("Standard Deviation: " + stand_dev.to_s)
 

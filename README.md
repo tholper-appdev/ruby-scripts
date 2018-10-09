@@ -206,32 +206,6 @@ Try modifying the copy in `word_count_text.txt` and see if your program still pr
 
 ### rails loan_payment
 
-In `loan_payment.rake`, write some code such that the command
-
-```
-rails loan_payment
-```
-
-reads the contents of
-
- - `lib/input_files/loan_payment_apr.txt`
- - `lib/input_files/loan_payment_years.txt`
- - `lib/input_files/loan_payment_principal.txt`
-
-and, based on what's in them, output something like
-
-```
-"APR: 5.0"
-"Number of Years: 10"
-"Principal: $50000.0"
-"Monthly Payment: $530.33"
-```
-
-using the formula
-
-![Payment formula](payment_formula.gif?raw=true "Payment formula")
-
-Try modifying the copy in `loan_payment_principal.txt` and see if your program still produces the correct values.
 
 ### rails count_and_sort
 
