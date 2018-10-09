@@ -12,4 +12,6 @@ task :fortune do
   # Your code goes below.
   # =====================================================================
 
+  rand_index = rand(fortunes.size)
+  ap(fortunes.at(rand_index))
 end

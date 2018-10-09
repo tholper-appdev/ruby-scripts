@@ -4,10 +4,10 @@ task :standard_deviation do
   input = open(path_to_file).read.chomp
   numbers = input.gsub(",", "").split.map(&:to_f)
 
-  # =====================================================================
-  # Your code goes below.
-  # The numbers from the file are in the array `numbers`.
-  # =====================================================================
+  sum = 0
+  numbers.each do |num|
+    sum = sum + num
+  end
 
   # VARIANCE
   # ========
@@ -16,11 +16,24 @@ task :standard_deviation do
   #  - for each number in the set,
   #    - we find the difference between the number and the mean
   #    - we square the difference
-  #  - the variance is the mean of the squared differences
+  #  - the variance is the mean of the squared differences  
+  mean = sum / numbers.size
+  
+  sum_diff = 0
+  numbers.each do |num|
+    sum_diff = (sum_diff + (num - mean)**2)
+  end  
+
+  variance = sum_diff/numbers.size
 
   # STANDARD DEVIATION
   # ==================
   # To find the standard deviation of a set,
   #  - take the square root of the variance
+  stand_dev = Math.sqrt(variance)
+
+  ap("Sorted numbers:")
+  ap(numbers)
+  ap("Standard Deviation: " + stand_dev.to_s)
 
 end

@@ -55,4 +55,7 @@ task :quote do
   # Your code goes below.
   # =====================================================================
 
+  rand_index = rand(quotations.size)
+  sample = quotations[rand_index]
+  ap(sample[:quote] + " -- " + sample[:citation] )
 end

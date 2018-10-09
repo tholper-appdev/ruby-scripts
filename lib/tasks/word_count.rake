@@ -12,4 +12,12 @@ task :word_count do
   # The special word from the file is in the variable 'special_word'.
   # =====================================================================
   
+  text_no_spaces = text.gsub(/\s+/, "")
+  word_count = text.scan(/(?=#{special_word})/).count
+
+  ap("File input: " + text)
+  ap("Character count (with spaces): " + text.size.to_s)
+  ap("Character count (without spaces): " +  text_no_spaces.size.to_s)
+  ap("Occurrences of " + special_word + ": " + word_count.to_s)
+  
 end

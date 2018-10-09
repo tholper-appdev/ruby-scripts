@@ -8,5 +8,10 @@ task :count_and_sort do
   # Your code goes below.
   # The numbers from the file are in the array `numbers`.
   # =====================================================================
-
+  
+  ap("Your numbers:")
+  ap(numbers)
+  ap("Count: " + numbers.size.to_s)
+  ap("Sorted numbers:")
+  ap(numbers.sort)
 end

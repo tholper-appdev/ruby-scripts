@@ -1,8 +1,8 @@
 namespace :solution do
   desc "Scrape IMDb Movies Coming Soon and output CSV"
   task :movies => :environment do
-    # url = "http://www.imdb.com/movies-coming-soon/"
-    # page = HTTParty.get(url)
+    url = "http://www.imdb.com/movies-coming-soon/"
+    page = HTTParty.get(url)
 
     filename = Rails.root.join("lib", "imdb", "movies-coming-soon.html")
     page = open(filename)
@@ -36,5 +36,9 @@ namespace :solution do
     ap "Saving movies to file 'coming_soon.csv...'"
 
     list_of_movies.to_csv("coming_soon.csv")
+    
+    list_of_movies.each do |movie|
+      ap(movie)
+    end
   end
 end
